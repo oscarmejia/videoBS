@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Peliculas</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Genero</th>
+      <th>Duracion</th>
+      <th>Calificacion</th>
+      <th>Disponibilidad</th>
+      <th>Estado</th>
+      <th>Ejemplares</th>
+      <th>Empleado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @peliculas.each do |pelicula| %>
+      <tr>
+        <td><%= pelicula.nombre %></td>
+        <td><%= pelicula.genero.nombre %></td>
+        <td><%= pelicula.duracion %></td>
+        <td><%= pelicula.calificacion %></td>
+        <td><%= pelicula.disponibilidad %></td>
+        <td><%= pelicula.estado.nombre %></td>
+        <td><%= pelicula.ejemplares %></td>
+        <td><%= pelicula.empleado.nombre %></td>
+        <td><%= link_to 'Show', pelicula, remote: true %></td>
+        <td><%= link_to 'Edit', edit_pelicula_path(pelicula) %></td>
+        <td><%= link_to 'Destroy', pelicula, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pelicula', new_pelicula_path %>

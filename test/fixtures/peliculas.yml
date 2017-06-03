@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  genero: one
+  duracion: 2017-05-31 22:12:37
+  calificacion: MyString
+  disponibilidad: false
+  estado: one
+  ejemplares: MyString
+  empleado: one
+
+two:
+  nombre: MyString
+  genero: two
+  duracion: 2017-05-31 22:12:37
+  calificacion: MyString
+  disponibilidad: false
+  estado: two
+  ejemplares: MyString
+  empleado: two

@@ -1,0 +1,25 @@
+<%= simple_form_for(@empleado) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :nombre %>
+    <%= f.input :apellido %>
+    <%= f.input :documento %>
+    <%= f.input :email %>
+    <%= f.input :telefono %>
+    <%= f.input :direccion %>
+    <%= f.input :fechaNa, as: :date, start_year: Date.today.year - 90,
+                              end_year: Date.today.year,
+                              order: [:day, :month, :year]  %>
+    <%= f.input :fechaIn, as: :date, start_year: Date.today.year - 90,
+                              end_year: Date.today.year,
+                              order: [:day, :month, :year]  %>
+    <%= f.input :fechafin, as: :date, start_year: Date.today.year - 90,
+                              end_year: Date.today.year,
+                              order: [:day, :month, :year]  %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

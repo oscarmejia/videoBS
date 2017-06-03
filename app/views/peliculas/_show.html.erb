@@ -1,0 +1,58 @@
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <p>
+        <strong>Nombre:</strong>
+        <%= @pelicula.nombre %>
+      </p>
+
+      <p>
+        <strong>Genero:</strong>
+        <%= @pelicula.genero.nombre %>
+      </p>
+
+      <p>
+        <strong>Duracion:</strong>
+        <%= @pelicula.duracion %>
+      </p>
+
+      <p>
+        <strong>Calificacion:</strong>
+        <%= @pelicula.calificacion %>
+      </p>
+
+      <p>
+        <strong>Disponibilidad:</strong>
+        <%= @pelicula.disponibilidad %>
+      </p>
+
+      <p>
+        <strong>Estado:</strong>
+        <%= @pelicula.estado.nombre %>
+      </p>
+
+      <p>
+        <strong>Ejemplares:</strong>
+        <%= @pelicula.ejemplares %>
+      </p>
+
+      <p>
+        <strong>Empleado:</strong>
+        <%= @pelicula.empleado.nombre %>
+      </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<%= link_to 'Edit', edit_pelicula_path(@pelicula) %> |
+<%= link_to 'Back', peliculas_path %>
